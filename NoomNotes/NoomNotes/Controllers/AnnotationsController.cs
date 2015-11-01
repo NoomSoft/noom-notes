@@ -17,14 +17,14 @@ namespace NoomNotes.Controllers
         {
             //TODO Remove - this was just to test output when hitting API
             Annotation a = new Annotation();
-            this.annotationManager = new AnnotationManager();
-            this.annotationManager.AddAnnotation(a);
+            annotationManager = new AnnotationManager();
+            annotationManager.AddAnnotation(a);
         }
         
         // api/annotations
         public Annotation[] Get()
         {
-            return this.annotationManager.GetAllAnnotations();
+            return annotationManager.GetAllAnnotations();
         }
     }
 }

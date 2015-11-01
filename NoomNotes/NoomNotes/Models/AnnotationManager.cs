@@ -45,14 +45,16 @@ namespace NoomNotes.Models
         public void AddAnnotation(Annotation newAnnotation) 
         {
             if (newAnnotation == null)
-                throw new ModelException("Unable to add null annotation.");
+                throw new ModelException($"{nameof(newAnnotation)} must not be null");
+
             this.loadedAnnotations.Add(newAnnotation);
         }
 
         public void AddAnnotations(Annotation[] annotations)
         {
             if (annotations == null)
-                throw new ModelException("Unable to add null annotations.");
+                throw new ModelException($"{nameof(annotations)} must not be null");
+
             this.loadedAnnotations.AddRange(annotations);
         }
     }
